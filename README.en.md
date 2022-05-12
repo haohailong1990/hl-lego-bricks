@@ -1,4 +1,4 @@
-# hl-lego-component
+# hl-lego-bricks
 
 #### Description
 业务组件库
