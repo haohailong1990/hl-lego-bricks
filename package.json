@@ -1,19 +1,32 @@
 {
   "name": "hl-lego-bricks",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
+  "private": false,
+  "main": "./dist/hl-lego-bricks.umd.js",
+  "module": "./dist/hl-lego-bricks.esm.js",
+  "types": "./dist/index.d.ts",
+  "author": "hailong.hao",
+  "license": "MIT",
+  "keywords": ["Component", "UI", "Vue3"],
+  "homepage": "https://gitee.com/hailong19901217/hl-lego-bricks",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/hailong19901217/hl-lego-bricks"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
     "lint": "vue-cli-service lint",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly":"npm run build"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "lodash-es": "^4.17.21"
   },
+  "files": ["dist"],
   "peerDevDependencies": {
     "vue": "^3.2.13"
   },
